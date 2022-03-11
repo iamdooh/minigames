@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+</head>
+<body>
+	<div id="minigame" style="text-align: center;">
+		<canvas id="minigame-canvas" width="1006" height="502"></canvas>
+	</div>
+	<div class="buttons" style="text-align: center;">
+		<button onclick="changeResult()" id="button" style="font-size: 20px;">isWinner: true</button>
+	</div>
+	
+	<script src="./game-2.js"></script>
+	<script>
+		function changeResult(){
+			responseData.isWinner = false;
+			document.getElementById('button').innerText = 'isWinner: false';
+			document.getElementById('button').setAttribute('disabled', 'disabled');
+		}
+	</script>
+</body>
+</html>
